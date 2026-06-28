@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Horizontal Circular Curve · Pawan Bhattarai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>Horizontal Circular Curve</h1>
+    <a href="https://bhattaraipawan.github.io/">&larr; Back to portfolio</a>
+  </div>
+
+  <main class="app-stage">
+    <div class="tool">
+      <p class="lead">Simple circular curve for highway alignment. Set the radius and deflection angle &mdash; the geometry and all curve elements update live.</p>
+
+      <div class="grid">
+        <div class="canvas-box">
+          <canvas id="cv" width="720" height="520"></canvas>
+        </div>
+
+        <div class="side">
+          <div class="controls">
+            <div class="ctrl">
+              <label for="R">Radius&nbsp;R</label>
+              <div class="num"><input id="R" type="number" min="1" step="10" value="400"><span class="unit">ft</span></div>
+            </div>
+            <div class="ctrl">
+              <label for="D">Deflection&nbsp;&Delta;</label>
+              <div class="num"><input id="D" type="number" min="1" max="179" step="1" value="30"><span class="unit">&deg;</span></div>
+            </div>
+            <div class="ctrl">
+              <label for="PI">PI station</label>
+              <div class="num"><input id="PI" type="number" min="0" step="1" value="10000"><span class="unit">ft</span></div>
+            </div>
+          </div>
+
+          <table class="out">
+            <tbody>
+              <tr><th>Tangent, T</th><td id="oT">&mdash;</td></tr>
+              <tr><th>Curve length, L</th><td id="oL">&mdash;</td></tr>
+              <tr><th>Long chord, LC</th><td id="oLC">&mdash;</td></tr>
+              <tr><th>External, E</th><td id="oE">&mdash;</td></tr>
+              <tr><th>Mid-ordinate, M</th><td id="oM">&mdash;</td></tr>
+              <tr><th>Degree of curve, D<sub>a</sub></th><td id="oDc">&mdash;</td></tr>
+              <tr class="sta"><th>PC station</th><td id="oPC">&mdash;</td></tr>
+              <tr class="sta"><th>PT station</th><td id="oPT">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
